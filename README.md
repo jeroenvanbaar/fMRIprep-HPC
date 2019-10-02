@@ -30,7 +30,7 @@ sbatch submit_BIDSify_jobs.sh
 ```
 
 # 3. Preprocess using fMRIPrep
-1. Download freesurfer license file and update its location in `3.fMRIprep/submit_fmriprep_jobs.sh`
+1. Download freesurfer license file from https://surfer.nmr.mgh.harvard.edu/registration.html and update its location in `3.fMRIprep/submit_fmriprep_jobs.sh`
 2. Create fMRIprep Singularity container:
 ```bash
 ssh -X jvanbaar@ssh.ccv.brown.edu
