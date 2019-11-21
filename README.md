@@ -46,5 +46,5 @@ singularity build /my_images/fmriprep-<version>.simg docker://poldracklab/fmripr
 ssh -X jvanbaar@ssh.ccv.brown.edu
 cd YOUR_DIRECTORY_WITH_submit_fmriprep_jobs.sh
 mkdir fmriprep_logs
-sbatch submit_BIDSify_jobs.sh
+sbatch submit_fmriprep_jobs.sh
 ```
