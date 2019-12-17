@@ -14,8 +14,8 @@
 # Provide index values (TASK IDs)
 #SBATCH --array=YOUR_SUBJECT_NUMBERS_HERE
 # Use '%A' for array-job ID, '%J' for job ID and '%a' for task ID
-#SBATCH -e dicom_convert_logs/dicom_convert_sub-%a.err
-#SBATCH -o dicom_convert_logs/dicom_convert_sub-%a.out
+#SBATCH -e dicom_convert_logs/dicom_convert_sub-%a_err.txt
+#SBATCH -o dicom_convert_logs/dicom_convert_sub-%a_out.txt
 
 # Messages to
 #SBATCH --mail-type=ALL
