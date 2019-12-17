@@ -27,9 +27,10 @@ mkdir dicom_convert_logs
 sbatch submit_DICOM_convert_jobs.sh
 ```
 # 2. BIDSify
-1. Enter dataset parameters - e.g. per subject, indicate which task was performed during each scanner run, which run was the anatomical scan, etc. Use notebook `2.BIDSify/Enter_dataset_parameters.ipynb` to do this & write to .json file per subject which is then read in step 3.
-2. edit `2.BIDSify/bidsify.py` and `2.BIDSify/submit_BIDSify_jobs.sh` to fit your folder structure.
-2. Use Oscar to run bidsify.py on your dataset:
+1. Create & activate an Anaconda environment (e.g. called 'fmriprep_environment') in which you install the packages numpy, pandas, and jupyter. To do this try running `conda create --name fmriprep_environment` then `source activate fmriprep_environment` then `conda install pip` then `pip install numpy pandas jupyter`.
+2. Enter dataset parameters - e.g. per subject, indicate which task was performed during each scanner run, which run was the anatomical scan, etc. To do this navigate to the directory where you keep the notebook `2.BIDSify/Enter_dataset_parameters.ipynb` and open it. This notebook will walk you through editing the dataset details and writing a .json file per subject which is then read in step 3.
+3. edit `2.BIDSify/bidsify.py` and `2.BIDSify/submit_BIDSify_jobs.sh` to fit your folder structure.
+4. Use Oscar to run bidsify.py on your dataset:
 ```bash
 ssh -X jvanbaar@ssh.ccv.brown.edu
 cd YOUR_DIRECTORY_WITH_submit_BIDSify_jobs.sh
