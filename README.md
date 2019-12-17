@@ -4,6 +4,11 @@ Guide to preprocessing fMRI data using fMRIprep on a high-performance computing 
 # 0. Data storage
 If you use Oscar/CCV for your analyses, it's good practice to also store your raw data (DICOMs) on Isilon (a.k.a. files.brown.edu). Copy your DICOMs over from Isilon to Oscar and then run the DICOM convert step on the Oscar data. To transfer files from Isilon to Oscar you can use <a href='https://docs.ccv.brown.edu/oscar/managing-files/filetransfer-isilon'>smbclient in the command line</a> or <a href='https://docs.ccv.brown.edu/oscar/managing-files/filetransfer/using-globus'>Globus in the web browser</a> (which is more user-friendly). To set up an 'endpoint' for your Isilon folder in Globus, check out <a href='https://drive.google.com/file/d/150QOh0Fn50kBAMEa1aFHjlXuc60zKfqE/view'>this guide</a> (if this link breaks, please let us know). The Oscar endpoint should be available by default in Globus by typing `brownccv#Brown-CCV-oscar-1` in the search bar.
 
+# 0b. Software prep
+You will need the following software installed on your computer:
+- Python 3.x preferably installed through an Anaconda distribution
+- The packages numpy, pandas, jupyter
+
 # 1. DICOM convert
 1. Edit the bash script `1.DICOM_convert/submit_DICOM_convert_jobs.sh` to fit your folder structure and subject numbers.
    * `SBATCH --array=8,10-12`
