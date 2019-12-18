@@ -44,7 +44,7 @@ sbatch submit_BIDSify_jobs.sh
 ```bash
 ssh -X jvanbaar@ssh.ccv.brown.edu
 cd YOUR_PROJECT_DIRECTORY
-singularity build /my_images/fmriprep-<version>.simg docker://poldracklab/fmriprep:<version>
+singularity build /fmriprep-<version>.simg docker://poldracklab/fmriprep:<version>
 # Replace <version> by your desired fMRIprep version, see https://fmriprep.readthedocs.io/en/stable/changes.html for stable versions or https://github.com/poldracklab/fmriprep/releases for all versions incl. release candidates (rc).
 # NOTE: For me (jvanbaar), right now (2019/11/04), building the container works when on an Oscar login node, but NOT on compute nodes. No idea why.
 ```
